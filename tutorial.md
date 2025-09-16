@@ -54,9 +54,25 @@ basic.forever(function () {
 ## Utilizando os Reflexos
 
 Quando **A** for pressionado, testamos se o ``||variables:ponto||`` está no centro ou não.
-
 Use um bloco de ``||input:Entrada||`` ``||input:no botão pressionado||`` para tratar o botão **A**. 
-Coloque um bloco ``||logic:se ... sen||``.
+Coloque um bloco ``||logic:se ... senão||``.
+
+```blocks
+let ponto = game.createSprite(2, 2)
+input.onButtonPressed(Button.A, function () {
+    if (true) {
+    } else {
+    }
+})
+basic.forever(function () {
+    ponto.move(1)
+    basic.pause(100)
+    ponto.ifOnEdgeBounce()
+})
+```
+
+## Utilizando os Reflexos
+
 Dentro de verdadeiro use um bloco de comparação de igualdade que você encontra em ``||logic:Lógica||``.
 Para o primeiro espaço da comparação pegue x do ``||variables:ponto||`` na aba de ``||game:Jogo||`` e coloque `2` no segundo espaço.
 
